@@ -22,3 +22,17 @@ body {
 .recession {
 	stroke: none;
 }
+
+.btn-secondary {
+	border: 1px solid #cccccc;
+}
+
+.counties {
+  fill: white;
+}
+
+.states {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}

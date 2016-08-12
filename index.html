@@ -11,14 +11,39 @@
     
     <body>
 		
-		<div id="snap_ts_plot"></div>
+		<div class="plot" id="snap_ts_plot"></div>
+    
+    <div id="maps">
+        <div class="btn-toolbar" role="toolbar">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-secondary" onClick="selectAll()">All</button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-secondary" onClick="selectOld()">Elderly</button>
+            <button type="button" class="btn btn-secondary" onClick="selectChild()">Children</button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-secondary" onClick="selectWhite()">Whites</button>
+            <button type="button" class="btn btn-secondary" onClick="selectBlack()">Blacks</button>
+            <button type="button" class="btn btn-secondary" onClick="selectHisp()">Hispanics</button>
+            <button type="button" class="btn btn-secondary" onClick="selectAsian()">Asians</button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-secondary" onClick="select2Workers()">Two Workers</button>
+          </div>
+        </div>
+
+        <div class="plot" id="maps_plot"></div>
+    </div>
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>    	
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>    	
     	<script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
-		<script type="text/javascript" src="js/d3-tip-v0.6.7.js"></script>
+      <script src="https://d3js.org/d3-queue.v3.min.js"></script>
+      <script src="https://d3js.org/topojson.v0.min.js"></script>
 
-		<script type="text/javascript" src="js/snap_ts.js"></script>
+		  <script type="text/javascript" src="js/snap_ts.js"></script>
+      <script type="text/javascript" src="js/maps.js"></script>
 
     </body>
 
