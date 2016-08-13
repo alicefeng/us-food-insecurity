@@ -36,3 +36,8 @@ body {
   stroke: #fff;
   stroke-linejoin: round;
 }
+
+.ficircle {
+  stroke: #fd9726;
+  stroke-width: 2px;
+}
