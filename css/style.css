@@ -2,6 +2,42 @@ body {
   font: 10px sans-serif;
 }
 
+#vis-container {
+  position: relative;
+  width: 980px;
+  height: 700px;
+  margin-top: 10px;
+}
+
+#vis-nav {
+  z-index: 20;
+}
+
+#sections {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  top: 0px;
+  z-index: 90;
+}
+
+.step {
+  margin-bottom: 200px;
+}
+
+#vis-canvas {
+  display: inline-block;
+  position: fixed;
+  top: 60px;
+  z-index: 1;
+  margin-left: 0;
+  padding: 20px;
+
+  height: 600px;
+  width: 800px;
+/*  background-color: #ddd;*/
+}
+
 .axis path,
 .axis line {
   fill: none;
