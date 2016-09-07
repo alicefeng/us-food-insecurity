@@ -17,46 +17,53 @@
 
         <div id="vis-nav">
           <!-- buttons for navigation go here -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-default" id="step1">Food insecurity</button>
+            <button type="button" class="btn btn-default" id="step2">SNAP over Time</button>
+            <button type="button" class="btn btn-default" id="step3">SNAP Map</button>
+          </div>
         </div>
 
         <div id="vis-container">
-          <div id = "sections">
+          <div id = "annotation-steps">
 
             <!-- Annotation steps here -->
-            <section class="step">
+            <div class="annotation-step" id="step1-annotation" style="display:block;">
+              <div class="annotation">
                 <h4>Percent of food insecure households</h4>
-              <!-- <div class="plot" id="fi_plot"></div> -->
-    	      </section>
+              </div>
+    	      </div>
 
-            <section class="step">
-            	<!--<div class="plot" id="snap_ts_plot"></div> -->
-            </section>
+            <div class="annotation-step" id="step2-annotation">
+              <div class="annotation">
+                <h4>SNAP Participation Over Time</h4>
+              </div>
+            </div>
 
-            <section class="step">
-              <!--
-              <div class="btn-toolbar" role="toolbar">
-                <div class="btn-group" role="group">
-                  <button type="button" class="btn btn-secondary" onClick="selectAll()">All</button>
-                </div>
-                <div class="btn-group" role="group">
-                  <button type="button" class="btn btn-secondary" onClick="selectOld()">Elderly</button>
-                  <button type="button" class="btn btn-secondary" onClick="selectChild()">Children</button>
-                </div>
-                <div class="btn-group" role="group">
-                  <button type="button" class="btn btn-secondary" onClick="selectWhite()">Whites</button>
-                  <button type="button" class="btn btn-secondary" onClick="selectBlack()">Blacks</button>
-                  <button type="button" class="btn btn-secondary" onClick="selectHisp()">Hispanics</button>
-                  <button type="button" class="btn btn-secondary" onClick="selectAsian()">Asians</button>
-                </div>
-                <div class="btn-group" role="group">
-                  <button type="button" class="btn btn-secondary" onClick="select2Workers()">Two Workers</button>
+            <div class="annotation-step" id="step3-annotation">
+              <div class="annotation">
+                <h4>SNAP Participation by County</h4>
+
+                <div class="btn-toolbar" role="toolbar">
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-secondary" onClick="selectAll()">All</button>
+                  </div>
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-secondary" onClick="selectOld()">Elderly</button>
+                    <button type="button" class="btn btn-secondary" onClick="selectChild()">Children</button>
+                  </div>
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-secondary" onClick="selectWhite()">Whites</button>
+                    <button type="button" class="btn btn-secondary" onClick="selectBlack()">Blacks</button>
+                    <button type="button" class="btn btn-secondary" onClick="selectHisp()">Hispanics</button>
+                    <button type="button" class="btn btn-secondary" onClick="selectAsian()">Asians</button>
+                  </div>
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-secondary" onClick="select2Workers()">Two Workers</button>
+                  </div>
                 </div>
               </div>
-
-              <div class="plot" id="maps_plot"></div>
-            -->
-            </section>
-
+            </div>
           </div>
 
           <!-- Draw visualization here -->
@@ -70,6 +77,7 @@
       <script src="https://d3js.org/d3-queue.v3.min.js"></script>
       <script src="https://d3js.org/topojson.v0.min.js"></script>
 
+      <script type="text/javascript" src="js/stepper.js"></script>
       <script type="text/javascript" src="js/fi_plots.js"></script>
 		  <script type="text/javascript" src="js/snap_ts.js"></script>
       <script type="text/javascript" src="js/maps.js"></script>
