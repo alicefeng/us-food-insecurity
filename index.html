@@ -2,8 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
         <title>US Food Insecurity</title>
@@ -11,18 +10,15 @@
     
     <body>
 		
-      <div class="container">
+      <div id="container">
 
         <h1>Food Insecurity in the United States</h1>
 
         <div id="vis-nav">
           <!-- buttons for navigation go here -->
           <div class="btn-group">
-            <button type="button" class="btn btn-default active" id="step1">Food insecurity</button>
-            <button type="button" class="btn btn-default" id="step2">Food insecurity 2</button>
-            <button type="button" class="btn btn-default" id="step3">Food insecurity 3</button>
-            <button type="button" class="btn btn-default" id="step12">SNAP over Time</button>
-            <button type="button" class="btn btn-default" id="step13">SNAP Map</button>
+            <a href="#" id="prev" class="nav-button disabled">Prev</a>
+            <a href="#" id="next" class="nav-button active">Next</a>
           </div>
         </div>
 
@@ -30,7 +26,6 @@
           <div id = "annotation-steps">
 
               <h4 class="annotation-title">What does food insecurity in the US look like?</h4>
-
 
             <!-- Annotation steps here -->
             <div class="annotation-step" id="step1-annotation" style="display:block;">
@@ -40,7 +35,7 @@
             </div>
             <div class="annotation-step" id="step2-annotation">
               <div class="annotation">
-                <p>20% said they had run short of money and had to try to make their food or food money go further.</p>
+                <p>26% said they had run short of money and had to try to make their food or food money go further.</p>
               </div>
             </div>
             <div class="annotation-step" id="step3-annotation">

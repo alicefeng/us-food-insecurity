@@ -2,6 +2,28 @@ body {
   font: 10px sans-serif;
 }
 
+#container{
+  margin: auto;
+  padding-top: 20px;
+  width: 980px;
+}
+
+/* Basic styling for the step links */
+a.nav-button {
+  padding: 5px;
+  background-color: #444;
+  color: #888;
+  text-decoration: none;
+}
+
+a.nav-button:hover, a.active {
+  color: #ddd;
+}
+
+a.disabled {
+    pointer-events: none;
+}
+
 #vis-container {
   position: relative;
   width: 980px;

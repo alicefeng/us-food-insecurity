@@ -24,24 +24,12 @@ function drawFi_Plots() {
 	d3.csv("data/foodinsecure.csv", function(d) {
 		
 		return {
-			pctateless: d.pctateless,
-			pctbalanced: d.pctbalanced,
-			pctcutmeals: d.pctcutmeals,
-			pctfoodbank: d.pctfoodbank,
-			pctfurther: d.pctfurther,
-			pcthungry: d.pcthungry,
-			pctinsecure: d.pctinsecure,
-			pctnoeat: d.pctnoeat,
-			pctnofood: d.pctnofood,
-			pctnotenough: d.pctnotenough,
-			pctrunout: d.pctrunout,
-			pctsoupkitchen: d.pctsoupkitchen,
 			pctspendmore: d.pctspendmore
 		};
 
 	}, function(error, data) {
 		
-		console.log("food insecurity data: ", data);
+		//console.log("food insecurity data: ", data);
 
 		// lay out circles
 		var circles = fi_plot.selectAll(".ficircle")
@@ -65,7 +53,6 @@ function updateCircles(selectedVar) {
 		pctateless: d.pctateless,
 		pctbalanced: d.pctbalanced,
 		pctcutmeals: d.pctcutmeals,
-		pctfoodbank: d.pctfoodbank,
 		pctfurther: d.pctfurther,
 		pcthungry: d.pcthungry,
 		pctinsecure: d.pctinsecure,
@@ -73,7 +60,6 @@ function updateCircles(selectedVar) {
 		pctnofood: d.pctnofood,
 		pctnotenough: d.pctnotenough,
 		pctrunout: d.pctrunout,
-		pctsoupkitchen: d.pctsoupkitchen,
 		pctspendmore: d.pctspendmore
 	};
 
