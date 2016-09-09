@@ -52,7 +52,7 @@ function drawFi_Plots() {
 		  	.attr("cx", function(d, i) { return xScale_fi(i%10) + (w_fi/10/2); })
 		  	.attr("cy", function(d, i) { return yScale_fi(Math.floor(i/10) + 1); })
 		  	.attr("r", (w_fi/10)/2 - 4)
-		  	.style("fill", function(d) { if(d.pctinsecure == 'yes') { return "#D3D3D3"; }
+		  	.style("fill", function(d) { if(d.pctspendmore == 'yes') { return "#D3D3D3"; }
 		  								 else { return "#fd9726"; } });
 
 	})
@@ -79,15 +79,11 @@ function updateCircles(selectedVar) {
 
 	}, function(error, data) {
 
-		var circles = fi_plot.selectAll(".ficircle")
+		var circles = d3.selectAll(".ficircle")
 			.data(data)
 			.transition()
 			.duration(500)
 		  	.style("fill", function(d) { if(d[selectedVar] == 'yes') { return "#D3D3D3"; }
 		  								 else { return "#fd9726"; } });
 	})  	
-}
-
-function ateLess() {
-	updateCircles("pctateless");
 }
