@@ -12,7 +12,7 @@ function switchAnnotation(navcount)
   $("#step" + navcount + "-annotation").delay(300).fadeIn(500);
 }
 
-function switchGraph(navcount)
+function switchGraph(navcount, prevcount)
 {
   $('#map_buttons').hide();
   
@@ -48,8 +48,15 @@ function switchGraph(navcount)
   if(navcount == 10) { 
     updateCircles("pctnoeat");
   }
-  if(navcount == 11) { 
-    updateCircles("pctinsecure");
+  if(navcount == 11) {
+    if(prevcount == 12) {
+      $('#vis-canvas svg').remove();
+      $('#vis-canvas').hide();
+      drawFi_Plots("pctinsecure");
+    } 
+    else {
+      updateCircles("pctinsecure");
+    }
   }
   if(navcount == 12) {
     $('#vis-canvas svg').remove();
@@ -74,10 +81,11 @@ function switchGraph(navcount)
 $(document).ready(function() {
 
   // draw the first plot when the page is loaded
-  drawFi_Plots();
+  drawFi_Plots("pctspendmore");
   
   // set counter to track where we are in the story
   var navcount = 1;
+  var prevcount = 0;
 
   $("a.nav-button").click(function() {
     
@@ -87,9 +95,11 @@ $(document).ready(function() {
     // based on which button was clicked
     if(id == 'next') {
       navcount += 1;
+      prevcount = navcount - 1;
     }
     else {
       navcount -= 1;
+      prevcount = navcount + 1;
     }
 
     // make buttons active only when applicable
@@ -119,7 +129,7 @@ $(document).ready(function() {
 
     // switch annotations and graphs based on button clicked
     switchAnnotation(navcount);
-    switchGraph(navcount);
+    switchGraph(navcount, prevcount);
     
     console.log(navcount);
 

@@ -11,7 +11,7 @@ var yScale_fi = d3.scale.linear()
 	.domain([1, 10])
 	.range([0, h_fi]);
 
-function drawFi_Plots() {
+function drawFi_Plots(selectedVar) {
 
 	// set up plot
 	var fi_plot = d3.select("#vis-canvas")
@@ -24,13 +24,12 @@ function drawFi_Plots() {
 	d3.csv("data/foodinsecure.csv", function(d) {
 		
 		return {
-			pctspendmore: d.pctspendmore
+			pctspendmore: d.pctspendmore,
+			pctinsecure: d.pctinsecure
 		};
 
 	}, function(error, data) {
 		
-		//console.log("food insecurity data: ", data);
-
 		// lay out circles
 		var circles = fi_plot.selectAll(".ficircle")
 			.data(data)
@@ -40,7 +39,7 @@ function drawFi_Plots() {
 		  	.attr("cx", function(d, i) { return xScale_fi(i%10) + (w_fi/10/2); })
 		  	.attr("cy", function(d, i) { return yScale_fi(Math.floor(i/10) + 1); })
 		  	.attr("r", (w_fi/10)/2 - 4)
-		  	.style("fill", function(d) { if(d.pctspendmore == 'yes') { return "#D3D3D3"; }
+		  	.style("fill", function(d) { if(d[selectedVar] == 'yes') { return "#D3D3D3"; }
 		  								 else { return "#fd9726"; } });
 
 	})
