@@ -24,6 +24,10 @@ a.disabled {
     pointer-events: none;
 }
 
+.btn-secondary {
+  border: 1px solid #cccccc;
+}
+
 #vis-container {
   position: relative;
   width: 980px;
@@ -83,10 +87,6 @@ a.disabled {
 
 .recession {
 	stroke: none;
-}
-
-.btn-secondary {
-	border: 1px solid #cccccc;
 }
 
 .counties {

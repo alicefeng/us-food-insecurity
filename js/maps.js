@@ -1,5 +1,5 @@
-var map_w = 1000,
-    map_h = 800;
+var map_w = 800,
+    map_h = 600;
 
 // set color scale
 var mColor = d3.scale.linear()
@@ -19,7 +19,7 @@ function drawMap() {
   var rateById = d3.map();
 
   var projection = d3.geo.albersUsa()
-      .scale(1200)
+      .scale(1000)
       .translate([map_w / 2, map_h / 2]);
 
   var path = d3.geo.path()
