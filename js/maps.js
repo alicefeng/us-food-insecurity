@@ -69,7 +69,7 @@ function updateMap(selectedVar) {
     var counties = d3.select(".snapMap").selectAll(".county")
       .data(topojson.object(us, us.objects.counties).geometries)
       .transition()
-      .style("fill", function(d) { return mColor(rateById.get(+d.id)); });
+      .style("fill", function(d) { return rateById.get(+d.id) == "" ? "white" : mColor(rateById.get(+d.id)); });
   }
 }
 
