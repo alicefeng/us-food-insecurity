@@ -71,7 +71,7 @@ function drawSnapTs() {
 		  	.attr("y", 0)
 		  	.attr("width", xScale(new Date(2016, 1, 1)) - xScale(new Date(2015, 1, 2)) + 1)  // width of one year
 		  	.attr("height", h - 1)
-		  	.style("fill", function(d) { return d.Recession == 'Yes' ? '#E5E5E5' : 'none'; });
+		  	.style("fill", function(d) { return d.Recession == 'Yes' ? '#444' : 'none'; });
 
 		// draw line for percentage of US population receiving SNAP
 		tsPlot.append("path")

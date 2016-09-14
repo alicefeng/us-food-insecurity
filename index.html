@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8">
     		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans|PT+Mono" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -17,18 +18,10 @@
 
         <h1>Food Insecurity in the United States</h1>
 
-        <div id="vis-nav">
-          <!-- buttons for navigation go here -->
-          <div class="btn-group">
-            <a href="#" id="prev" class="nav-button disabled">Prev</a>
-            <a href="#" id="next" class="nav-button active">Next</a>
-          </div>
-        </div>
-
         <div id="vis-container">
           <div id = "annotation-steps">
 
-              <h4 class="annotation-title">What does food insecurity in the US look like?</h4>
+              <h4 class="annotation-title">What does food insecurity in the U.S. look like?</h4>
 
             <!-- Annotation steps here -->
             <div class="annotation-step" id="step1-annotation" style="display:block;">
@@ -106,7 +99,7 @@
 
           <!-- Draw visualization here -->
           <div id="vis-canvas">
-            <g id="map_buttons" style="display:none;">
+            <g id="map_dropdown" style="display:none;">
               <div class="dropdown">
                 <button class="btn btn-default dropdown-toggle" type="button" id="map-dropdown" data-toggle="dropdown">
                   All
@@ -127,6 +120,14 @@
                 </ul>
               </div>
             </g>
+          </div>
+        </div>
+
+        <div id="vis-nav">
+          <!-- buttons for navigation go here -->
+          <div class="btn-group">
+            <a href="#" id="prev" class="nav-button disabled">Prev</a>
+            <a href="#" id="next" class="nav-button active">Next</a>
           </div>
         </div>
       

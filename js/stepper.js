@@ -4,8 +4,11 @@ function switchAnnotation(navcount)
   if(navcount == 12) {
     $(".annotation-title").html("Number of people receiving SNAP benefits over time");
   }
-  if(navcount == 13) {
+  else if(navcount == 13) {
     $(".annotation-title").html("SNAP Participation by County");
+  }
+  else {
+    $(".annotation-title").html("What does food insecurity in the U.S. look like?");
   }
 
   $(".annotation-step").hide();
@@ -14,7 +17,7 @@ function switchAnnotation(navcount)
 
 function switchGraph(navcount, prevcount)
 {
-  $('#map_buttons').hide();
+  $('#map_dropdown').hide();
   
   // switch graphs based on what button was clicked 
   // remove the plot when switching between the circles and the time series plot or the map
@@ -68,7 +71,7 @@ function switchGraph(navcount, prevcount)
     $('#vis-canvas').hide();
 
     // display map buttons
-    $('#map_buttons').show();
+    $('#map_dropdown').show();
 
     // set the button for "All" to active
     $('#btn-all').toggleClass("active", true);

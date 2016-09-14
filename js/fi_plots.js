@@ -39,8 +39,8 @@ function drawFi_Plots(selectedVar) {
 		  	.attr("cx", function(d, i) { return xScale_fi(i%10) + (w_fi/10/2); })
 		  	.attr("cy", function(d, i) { return yScale_fi(Math.floor(i/10) + 1); })
 		  	.attr("r", (w_fi/10)/2 - 4)
-		  	.style("fill", function(d) { if(d[selectedVar] == 'yes') { return "#D3D3D3"; }
-		  								 else { return "#fd9726"; } });
+		  	.style("fill", function(d) { if(d[selectedVar] == 'yes') { return "#111111"; }
+		  								 else { return "#fd8704"; } });
 
 	})
 }
@@ -68,7 +68,7 @@ function updateCircles(selectedVar) {
 			.data(data)
 			.transition()
 			.duration(500)
-		  	.style("fill", function(d) { if(d[selectedVar] == 'yes') { return "#D3D3D3"; }
-		  								 else { return "#fd9726"; } });
+		  	.style("fill", function(d) { if(d[selectedVar] == 'yes') { return "#111111"; }
+		  								 else { return "#fd8704"; } });
 	})  	
 }

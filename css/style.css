@@ -1,8 +1,20 @@
 body {
-  font: 10px sans-serif;
+  font-family: 'Noto Sans', sans-serif;
+  background: #111;
+  color: #eee;
 }
 
-#container{
+h1 {
+  font-family: 'PT Mono', monospace;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h4 {
+  margin-bottom: 20px;
+}
+
+#container {
   margin: auto;
   padding-top: 20px;
   width: 980px;
@@ -10,14 +22,21 @@ body {
 
 /* Basic styling for the step links */
 a.nav-button {
-  padding: 5px;
-  background-color: #444;
+  padding: 7px;
+  border: 2px solid #888;
+  border-radius: 5px;
   color: #888;
   text-decoration: none;
 }
 
-a.nav-button:hover, a.active {
+a.nav-button:hover {
+  background: #ccc;
+  color: #111111;
+}
+
+a.active {
   color: #ddd;
+  border-color: #ddd;
 }
 
 a.disabled {
@@ -31,8 +50,9 @@ a.disabled {
 #vis-container {
   position: relative;
   width: 980px;
-  height: 700px;
+  height: 650px;
   margin-top: 10px;
+  padding-top: 15px;
 }
 
 #annotation-steps {
@@ -42,20 +62,21 @@ a.disabled {
 
 #vis-nav {
   z-index: 20;
+  margin-left: 800px;
 }
 
 #vis-canvas {
   position: absolute;
   z-index: 10;
   margin-left: 400px;
-  width: 100%;
+/*  width: 100%;*/
   height: 100%;
   overflow: hidden;
 }
 
 .annotation-title {
   left: 30px;
-  width: 200px;
+  width: 300px;
 }
 
 .annotation-step {
@@ -65,14 +86,27 @@ a.disabled {
 
 .annotation {
   position: absolute;
-  width: 200px;
+  width: 300px;
 }
 
 .axis path,
-.axis line {
+.axis line, {
   fill: none;
-  stroke: #000;
+  stroke: #eee;
   shape-rendering: crispEdges;
+}
+
+.x.axis > .tick > line {
+  stroke: #eee;
+}
+
+.x.axis > path {
+  fill: none;
+}
+
+text {
+  fill: #eee;
+  font-size: 12px;
 }
 
 .y.axis path {
@@ -81,8 +115,8 @@ a.disabled {
 
 .line {
   fill: none;
-  stroke: steelblue;
-  stroke-width: 2px;
+  stroke: #1996FF;
+  stroke-width: 3px;
 }
 
 .recession {
@@ -90,16 +124,16 @@ a.disabled {
 }
 
 .counties {
-  fill: white;
+  fill: #eee;
 }
 
 .states {
   fill: none;
-  stroke: #fff;
+  stroke: #eee;
   stroke-linejoin: round;
 }
 
 .ficircle {
-  stroke: #fd9726;
-  stroke-width: 2px;
+  stroke: #fd8704;
+  stroke-width: 3px;
 }
