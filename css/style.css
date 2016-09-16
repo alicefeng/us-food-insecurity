@@ -89,6 +89,11 @@ a.disabled {
   width: 300px;
 }
 
+.form-control {
+  width: 20%;
+  padding: 4px 6px;
+}
+
 .axis path,
 .axis line, {
   fill: none;
@@ -107,6 +112,10 @@ a.disabled {
 text {
   fill: #eee;
   font-size: 12px;
+}
+
+.map-legend-label {
+  font-size: 10px;
 }
 
 .y.axis path {
@@ -129,7 +138,7 @@ text {
 
 .states {
   fill: none;
-  stroke: #eee;
+  stroke: #111;
   stroke-linejoin: round;
 }
 

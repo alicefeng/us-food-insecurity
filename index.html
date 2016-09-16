@@ -93,6 +93,22 @@
                 <p>This map shows the geographic distribution of the number of households within each county that are receiving SNAP benefits.</p>
                 <p>Approximately 1 in 5 children in the US received food stamp assistance from SNAP.  This is in contrast to the much lower participation rates of elderly households.</p>
                 <p>In addition, minorities are more likely to be enrolled in SNAP than whites.</p>
+              <svg id="map-legend"  transform="translate(0,40)">
+                <g>
+                  <rect x="0" y="0" width="29" height="20" fill="#C2C2C2"></rect>
+                  <rect x="28" y="0" width="29" height="20" fill="#E1E1E1"></rect>
+                  <rect x="56" y="0" width="25" height="20" fill="#9ECAE1"></rect>
+                  <rect x="80" y="0" width="41" height="20" fill="#6BAED6"></rect>
+                  <rect x="120" y="0" width="61" height="20" fill="#3182BD"></rect>
+                  <rect x="180" y="0" width="41" height="20" fill="#08519C"></rect>
+                  <text x="1" y="32" class="map-legend-label">0%</text>
+                  <text x="29" y="32" class="map-legend-label">7</text>
+                  <text x="57" y="32" class="map-legend-label">14.3</text>
+                  <text x="81" y="32" class="map-legend-label">20</text>
+                  <text x="121" y="32" class="map-legend-label">25</text>
+                  <text x="181" y="32" class="map-legend-label">40%</text>
+                </g>
+              </svg>
               </div>
             </div>
           </div>
@@ -100,25 +116,16 @@
           <!-- Draw visualization here -->
           <div id="vis-canvas">
             <g id="map_dropdown" style="display:none;">
-              <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="map-dropdown" data-toggle="dropdown">
-                  All
-                  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a href="#" onClick="selectAll()">All</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#" onClick="selectOld()">Elderly</a></li>
-                  <li><a href="#" onClick="selectChild()">Children</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#" onClick="selectWhite()">Whites</a></li>
-                  <li><a href="#" onClick="selectBlack()">Blacks</a></li>
-                  <li><a href="#" onClick="selectHisp()">Hispanics</a></li>
-                  <li><a href="#" onClick="selectAsian()">Asians</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#" onClick="select2Workers()">Two Workers</a></li>
-                </ul>
-              </div>
+              <select class="form-control">
+                <option onClick="selectAll()">All</option>
+                <option onClick="selectOld()">Elderly</option>
+                <option onClick="selectChild()">Children</option>
+                <option onClick="selectWhite()">Whites</option>
+                <option onClick="selectBlack()">Blacks</option>
+                <option onClick="selectHisp()">Hispanics</option>
+                <option onClick="selectAsian()">Asians</option>
+                <option onClick="select2Workers()">Two Workers</option>
+              </select>
             </g>
           </div>
         </div>
