@@ -89,6 +89,14 @@ a.disabled {
   width: 300px;
 }
 
+#footer {
+  margin-top: 40px;
+}
+
+.footer-text {
+  font-size: 10px;
+}
+
 .form-control {
   width: 20%;
   padding: 4px 6px;
