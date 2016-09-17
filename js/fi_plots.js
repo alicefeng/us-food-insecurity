@@ -1,5 +1,5 @@
-var w_fi = 250,
-    h_fi = 250,
+var w_fi = 270,
+    h_fi = 270,
     padding_fi = 40;
 
 // create scales
@@ -38,7 +38,7 @@ function drawFi_Plots(selectedVar) {
 		  	.attr("class", "ficircle")
 		  	.attr("cx", function(d, i) { return xScale_fi(i%10) + (w_fi/10/2); })
 		  	.attr("cy", function(d, i) { return yScale_fi(Math.floor(i/10) + 1); })
-		  	.attr("r", (w_fi/10)/2 - 4)
+		  	.attr("r", (w_fi/10)/2 - 3)
 		  	.style("fill", function(d) { if(d[selectedVar] == 'yes') { return "#111111"; }
 		  								 else { return "#fd8704"; } });
 

@@ -123,16 +123,6 @@ function selectBlack() {
     .classed("active", true);
 }
 
-function selectAsian() {
-  updateMap("pct_asian");
-
-  d3.selectAll(".btn-secondary")
-    .classed("active", false);
-
-  d3.select("#btn-asians")
-    .classed("active", true);
-}
-
 function selectHisp() {
   updateMap("pct_hisp");
 
@@ -140,15 +130,5 @@ function selectHisp() {
     .classed("active", false);
 
   d3.select("#btn-hispanics")
-    .classed("active", true);
-}
-
-function select2Workers() {
-  updateMap("pct_2workers");
-
-  d3.selectAll(".btn-secondary")
-    .classed("active", false);
-
-  d3.select("#btn-2workers")
     .classed("active", true);
 }
