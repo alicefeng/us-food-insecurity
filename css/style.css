@@ -122,8 +122,13 @@ text {
   font-size: 12px;
 }
 
+.map-legend-line {
+  stroke: #eee;
+  stroke-width: 1;
+}
+
 .map-legend-label {
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .y.axis path {
