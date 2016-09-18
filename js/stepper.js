@@ -11,6 +11,7 @@ function switchAnnotation(navcount)
     $(".annotation-title").html("What does food insecurity in the U.S. look like?");
   }
 
+  // change and fade in new annotation text
   $(".annotation-step").hide();
   $("#step" + navcount + "-annotation").delay(300).fadeIn(500);
 }
@@ -20,7 +21,7 @@ function switchGraph(navcount, prevcount)
   $('#map_dropdown').hide();
   
   // switch graphs based on what button was clicked 
-  // remove the plot when switching between the circles and the time series plot or the map
+  // also, remove the plot when switching between the circles and the time series plot or the map
   if(navcount == 1) {
     updateCircles("pctspendmore");
   }
@@ -72,9 +73,6 @@ function switchGraph(navcount, prevcount)
 
     // display map buttons
     $('#map_dropdown').show();
-
-    // set the button for "All" to active
-    $('#btn-all').toggleClass("active", true);
 
     drawMap();
   }
