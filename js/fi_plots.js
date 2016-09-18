@@ -67,7 +67,7 @@ function updateCircles(selectedVar) {
 		var circles = d3.selectAll(".ficircle")
 			.data(data)
 			.transition()
-			.duration(500)
+			.duration(1000)
 		  	.style("fill", function(d) { if(d[selectedVar] == 'yes') { return "#111111"; }
 		  								 else { return "#fd8704"; } });
 	})  	
