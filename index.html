@@ -122,13 +122,13 @@
           <!-- Draw visualization here -->
           <div id="vis-canvas">
             <g id="map_dropdown" style="display:none;">
-              <select class="form-control">
-                <option onClick="selectAll()">All</option>
-                <option onClick="selectOld()">Elderly</option>
-                <option onClick="selectChild()">Children</option>
-                <option onClick="selectWhite()">Whites</option>
-                <option onClick="selectBlack()">Blacks</option>
-                <option onClick="selectHisp()">Hispanics</option>
+				<select id="dropdown" class="form-control">
+					<option value="pct_snap">All</option>
+					<option value="pct_old">Elderly</option>
+					<option value="pct_child">Children</option>
+					<option value="pct_white">Whites</option>
+					<option value="pct_black">Blacks</option>
+					<option value="pct_hisp">Hispanics</option>
               </select>
             </g>
           </div>
@@ -148,13 +148,21 @@
         </div>
       </div>
 
-    	<script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+      <script>
+		/* function to change map from the dropdown */
+		$('#dropdown').on('change', function() {
+			var value = $(this).val();
+			updateMap(value);
+		});
+	  </script>
+		
+      <script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
       <script src="https://d3js.org/d3-queue.v3.min.js"></script>
       <script src="https://d3js.org/topojson.v0.min.js"></script>
 
       <script type="text/javascript" src="js/stepper.js"></script>
       <script type="text/javascript" src="js/fi_plots.js"></script>
-		  <script type="text/javascript" src="js/snap_ts.js"></script>
+	  <script type="text/javascript" src="js/snap_ts.js"></script>
       <script type="text/javascript" src="js/maps.js"></script>
 
     </body>
